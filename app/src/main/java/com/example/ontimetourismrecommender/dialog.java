@@ -40,7 +40,7 @@ String SiteId= Sheardpref.getInstance(getApplicationContext()).getSiteId();
                 Sheardpref.getInstance(getApplicationContext()).detetSiteID();
 String rate = String.valueOf(ratingRatingBar.getRating());
                 StringRequest stringRequest = new StringRequest(
-                        Request.Method.POST,"http://10.0.2.2/login/Rate.php"
+                        Request.Method.POST,"http://10.0.2.2/touristrecommender/Rate.php"
                         ,   new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

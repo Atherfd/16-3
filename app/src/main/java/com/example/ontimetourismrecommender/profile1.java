@@ -52,7 +52,7 @@ import java.util.Map;
 
 public class profile1 extends AppCompatActivity {
   String url="";
-    public static final String URL = "http://10.0.2.2/login/profile.php";
+    public static final String URL = "http://10.0.2.2/touristrecommender/profile.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -69,8 +69,8 @@ public class profile1 extends AppCompatActivity {
                 TextView name=findViewById(R.id.name);
                 TextView phone=findViewById(R.id.Phone);
                 TextView amount=findViewById(R.id.AmonutOfex);
-                TextView location=findViewById(R.id.Location);
-                TextView email=findViewById(R.id.Email);
+
+
                 TextView status=findViewById(R.id.Status);
                 TextView education=findViewById(R.id.education);
                 TextView Birthdate=findViewById(R.id.Birthdate);
@@ -80,8 +80,7 @@ public class profile1 extends AppCompatActivity {
                 intent.putExtra("Name", name.getText().toString());
                 intent.putExtra("Phone", phone.getText().toString());
                 intent.putExtra("Amount", amount.getText().toString());
-                intent.putExtra("Location",location.getText().toString());
-                intent.putExtra("Email",email.getText().toString());
+
                 intent.putExtra("Status", status.getText().toString());
                 intent.putExtra("Education", education.getText().toString());
                 intent.putExtra("Birthdate",Birthdate.getText().toString() );
@@ -145,8 +144,6 @@ ImageView Back= findViewById(R.id.backto);
         TextView username=findViewById(R.id.username);
         TextView phone=findViewById(R.id.Phone);
         TextView amount=findViewById(R.id.AmonutOfex);
-        TextView location=findViewById(R.id.Location);
-        TextView email=findViewById(R.id.Email);
         TextView status=findViewById(R.id.Status);
         TextView education=findViewById(R.id.education);
         TextView Birthdate=findViewById(R.id.Birthdate);
@@ -174,9 +171,7 @@ ImageView Back= findViewById(R.id.backto);
                             name.setText(product.getString("Name"));
                             phone.setText(product.getString("phone"));
                                     status.setText(product.getString("status"));
-                                    location.setText(product.getString("Location"));
                                     education.setText(product.getString("education"));
-                                    email.setText(product.getString("Email"));
                                           url=product.getString("Photo");
                                       if( !url.equals("null")) {
                                           Glide.with(getApplicationContext())

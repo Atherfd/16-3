@@ -61,6 +61,8 @@ private String getcity;
             }
         });
 
+
+
         // Now here we will add some dummy data in our model class
         createNewContactDialog();
 
@@ -92,7 +94,7 @@ private String getcity;
 
         StringRequest stringRequest = new StringRequest(
                 POST,
-                "http://10.0.2.2/login/Recommend.php",
+                "http://10.0.2.2/touristrecommender/R.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -104,7 +106,7 @@ if(array.length()==0){
 
     Toast.makeText(
             getApplicationContext(),
-            "Sorry, we don't have site in this city in our data base :( ",
+            "Sorry, there is no sites avaliable :( ",
             Toast.LENGTH_LONG
 
     ).show();
@@ -157,7 +159,7 @@ if(array.length()==0){
 
                 Map<String, String> params = new Hashtable<String, String>();
                 params.put("city",getcity );
-
+                params.put("Username",Sheardpref.getInstance(getApplicationContext()).getUsername() );
                 return params;
 
             }

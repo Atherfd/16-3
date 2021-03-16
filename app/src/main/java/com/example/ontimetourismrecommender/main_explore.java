@@ -67,9 +67,10 @@ photo.setOnClickListener (new View.OnClickListener(){
 
             }});
 
+
         StringRequest stringRequest = new StringRequest(
                 POST,
-               "http://10.0.2.2/login/Explore.php",
+               "http://10.0.2.2/touristrecommender/Explore.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

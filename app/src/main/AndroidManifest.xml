@@ -15,25 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".site2_recycle"></activity>
+        <activity android:name=".signUP"></activity>
         <activity android:name=".EditProfile" />
         <activity android:name=".HistoryFeed" />
-        <activity android:name=".toolbar1" />
         <activity android:name=".profile1" />
         <activity android:name=".logon" />
         <activity android:name=".Logon_Signup" />
         <activity android:name=".WelcomePage">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".dialog" />
-        <activity android:name=".main_explore"></activity>
-        <activity android:name=".main_recommend">
+        <activity android:name=".main_explore" />
+        <activity android:name=".main_recommend"></activity>
+        <activity android:name=".site_ifo"></activity>
+        <activity android:name=".MainActivity">    <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>

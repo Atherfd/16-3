@@ -16,6 +16,8 @@ private static final String SHARED_PREF_SiteID="TouristSiteID";
 private static final String KEY_ID="SiteID";
     private static final String SHARED_PREF_photo="Touristphoto";
     private static final String KEY_photo="photo";
+    private  static String  SHARED_PREF_SiteInfoID="TouristSiteIDInfo";
+    private static final String SiteIDIfo="SiteIDInfo";
         private Sheardpref(Context context) {
             ctx = context;
 
@@ -50,6 +52,27 @@ private static final String KEY_ID="SiteID";
 
             return true;
         }
+
+
+    public boolean SetSiteInfoId(String SiteInfo ){
+
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_SiteInfoID, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
+        editor.putString(SiteIDIfo, SiteInfo);
+
+        editor.apply();
+
+        return true;
+    }
+
+    public String GetSiteIDInfo(){
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_SiteInfoID, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(SiteIDIfo, null);
+    }
+
+
     public boolean userLogin(String username ){
 
         SharedPreferences sharedPreferences = ctx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);

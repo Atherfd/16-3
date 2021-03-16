@@ -2,4 +2,34 @@
     <string name="app_name">OnTimeTourismRecommender</string>
     <string name="button">Button</string>
     <string name="URL_profile">http://10.0.2.2/login/profile.php</string>
+
+
+    <string-array name="MaritalStatus">
+
+        <item>Married</item>
+        <item>Unmarried</item>
+    </string-array>
+
+    <string-array name="AmountOfSpending">
+        <item>Under 2000 SR</item>
+        <item>Over 2000 SR</item>
+    </string-array>
+
+    <string-array name="EducationLevel">
+        <item>Less than a Bachelor</item>
+        <item>Bachelor</item>
+        <item>Postgraduate</item>
+    </string-array>
+
+    <string-array name="PreferdWather">
+        <item>Rainy and Cloudy</item>
+        <item>Sunny</item>
+    </string-array>
+
+    <string-array name="WandringAs">
+        <item>Citizen</item>
+        <item>Resident</item>
+        <item>Tourist</item>
+    </string-array>
+
 </resources>

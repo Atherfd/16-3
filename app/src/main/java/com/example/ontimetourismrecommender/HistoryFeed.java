@@ -31,7 +31,7 @@ import java.util.Map;
 import static com.android.volley.Request.Method.POST;
 
 public class HistoryFeed extends AppCompatActivity {
-    private static final String URL_HistoryFeed = "http://10.0.2.2/login/Historyfeed.php";
+    private static final String URL_HistoryFeed = "http://10.0.2.2/touristrecommender/Historyfeed.php";
     List<HistoryFeedData> historyFeedData;
     androidx.recyclerview.widget.RecyclerView recyclerView;
 

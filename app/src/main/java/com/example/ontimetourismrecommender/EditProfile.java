@@ -68,12 +68,11 @@ public class EditProfile extends AppCompatActivity {
         UserName=data.getStringExtra("UserName");
         String Phone=data.getStringExtra("Phone");
         String Amount=data.getStringExtra("Amount");
-        String Location=data.getStringExtra("Location");
-        String Email= data.getStringExtra("Email");
+
         String Status= data.getStringExtra("Status");
         String Education= data.getStringExtra("Education");
         String Birthdate= data.getStringExtra("Birthdate");
-        Log.d(TAG, "onCreate: "+url+" "+ Name+" "+UserName+" "+Phone+" "+Amount+" "+Location+" "+ Email+" "+Status+" "+Education+" "+Birthdate);
+        Log.d(TAG, "onCreate: "+url+" "+ Name+" "+UserName+" "+Phone+" "+Amount+" "+Status+" "+Education+" "+Birthdate);
         TextView username=findViewById(R.id.Editusername);
         username.setText(UserName);
         EditText name= findViewById(R.id.EditName);
@@ -82,10 +81,6 @@ public class EditProfile extends AppCompatActivity {
         phone.setText(Phone);
         EditText amont=findViewById(R.id.EditAmonutOfex);
         amont.setText(Amount);
-        EditText location= findViewById(R.id.EditLocation);
-        location.setText(Location);
-        EditText email= findViewById(R.id.EditEmail);
-        email.setText(Email);
         EditText status= findViewById(R.id.EditStatus);
         status.setText(Status);
         EditText education= findViewById(R.id.Editeducation);
@@ -114,14 +109,13 @@ public class EditProfile extends AppCompatActivity {
                 String EditName= name.getText().toString();
                 String EditPhone= phone.getText().toString();
                 String EdidAmount= amont.getText().toString();
-                String EfotLocation= location.getText().toString();
-                String EditEmail= email.getText().toString();
+
                 String EditStatus= status.getText().toString();
                 String EditEducation= education.getText().toString();
                 String Editbirthdate= birthdate.getText().toString();
 
                 StringRequest stringRequest = new StringRequest(
-                        Request.Method.POST,"http://10.0.2.2/login/edit_detail.php"
+                        Request.Method.POST,"http://10.0.2.2/touristrecommender/edit_detail.php"
                         ,   new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -168,8 +162,6 @@ public class EditProfile extends AppCompatActivity {
                         params.put("username",UserName);
                         params.put("phone", EditPhone);
                         params.put("amount", EdidAmount);
-                        params.put("location", EfotLocation);
-                        params.put("Eamil", EditEmail);
                         params.put("Status", EditStatus);
                         params.put("Education", EditEducation);
                         params.put("birthday", Editbirthdate);
@@ -217,7 +209,7 @@ public class EditProfile extends AppCompatActivity {
                 final ProgressDialog progressDialog=new ProgressDialog(this);
                 progressDialog.setMessage("Uplaoding...");
                 progressDialog.show();
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://10.0.2.2/login/upload.php", new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, "http://10.0.2.2/touristrecommender/upload.php", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
 progressDialog.dismiss();

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context=".site_ifo">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/backtoexplore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Information"
+            android:textColor="#173B64"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageButton
+            android:id="@+id/AddToHistoryFeed"
+            android:layout_width="50dp"
+            android:layout_height="57dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/group_765"
+            >
+        </ImageButton>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:src="@drawable/auli"
+        android:scaleType="fitXY"
+        ></ImageView>
+
+
+    <TextView
+        android:id="@+id/SiteInformationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PlaceName"
+        android:textColor="#173B64"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingStart="37dp"
+        android:paddingEnd="15dp"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp"></TextView>
+
+    <ListView
+        android:id="@+id/LView_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="0.5dp"
+        tools:layout_height="50dp"
+        android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:divider="#fff"
+        android:paddingLeft="35dp"
+
+
+       >  </ListView>
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="#173B64"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingStart="37dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="15dp"
+      ></TextView>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:paddingStart="37dp"
+        android:paddingLeft="15dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+"
+        android:textColor="#3D699B"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="left"
+
+        >
+    </TextView>
+</LinearLayout>

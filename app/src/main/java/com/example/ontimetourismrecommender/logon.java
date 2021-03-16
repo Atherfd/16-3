@@ -67,7 +67,7 @@ public class logon extends AppCompatActivity {
                             String[] data = new String[2];
                             data[0] = name;
                             data[1] = p;
-                            PutData putData = new PutData("http://10.0.2.2/login/login.php", "POST", field, data);
+                            PutData putData = new PutData("http://10.0.2.2/touristrecommender/login.php", "POST", field, data);
                             if (putData.startPut()) {
                                 if (putData.onComplete()) {
                                     pro.setVisibility(View.GONE);
@@ -75,7 +75,7 @@ public class logon extends AppCompatActivity {
                                     String result = putData.getResult();
                                     if(result.equals("Login Success")){
                                         StringRequest stringRequest = new StringRequest(
-                                                Request.Method.POST,"http://10.0.2.2/login/getphoto.php"
+                                                Request.Method.POST,"http://10.0.2.2/touristrecommender/getphoto.php"
                                                 ,   new Response.Listener<String>() {
                                             @Override
                                             public void onResponse(String response) {

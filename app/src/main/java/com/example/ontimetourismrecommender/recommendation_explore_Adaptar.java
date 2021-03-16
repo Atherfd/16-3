@@ -39,6 +39,16 @@ public class recommendation_explore_Adaptar  extends RecyclerView.Adapter<recomm
     @Override
     public void onBindViewHolder(@NonNull TopPlacesViewHolder holder, int position) {
 siteData site=Site.get(position);
+
+        holder.siteinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Sheardpref.getInstance(context).SetSiteInfoId(site.getID());
+                Intent intent=new Intent(context, site_ifo.class);
+                context.startActivity(intent);
+
+            }
+        });
      holder.Map.setOnClickListener(new View.OnClickListener(){
 
          @Override
@@ -62,7 +72,7 @@ siteData site=Site.get(position);
 
     public static final class TopPlacesViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView placeImage;
+        ImageView placeImage, siteinfo;
         TextView placeName, Map;
 
         public TopPlacesViewHolder(@NonNull View itemView) {
@@ -71,6 +81,7 @@ siteData site=Site.get(position);
             placeImage = itemView.findViewById(R.id.recomdationSite_image);
             placeName = itemView.findViewById(R.id.RecommenationSiteName);
             Map = itemView.findViewById(R.id.themap);
+             siteinfo=itemView.findViewById(R.id.GoToSiteInf);
 
 
         }
